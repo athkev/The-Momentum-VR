@@ -34,7 +34,7 @@ When prompted, use the following credentials:
 
 ### Starting a new lab:
 
-When you start a new lab, create a new Unity project inside `CPS841-Labs` and name it appropriately (Lab1, Lab2, etc) Copy the example gitignore and attribution files. 
+When you start a new lab, create a new Unity project inside `CPS643-Labs` and name it appropriately (Lab1, Lab2, etc) Copy the example gitignore and attribution files. 
 
 
 In order for Unity to play nice with git, you have to change the way it stores files:
