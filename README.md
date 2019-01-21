@@ -10,12 +10,12 @@ __\*You only need to do this once per semester\*__
 To get started, you should fork your personal repository on GitLab:
 -   Go to https://gitlab.scs.ryerson.ca/ and login using your scs.ryerson.ca credentials (Under Kerberos).
     -   ***Be sure to set up your [profile password](https://gitlab.scs.ryerson.ca/profile/password/edit)*
--   Look for the `CPS841` repository and fork it.
+-   Look for the `CPS643` repository and fork it.
 -   On the menu on the left, click on `Members`. Add `tmcinern` and `ttibu` to the repository as Maintainers.
 -   Under repository settings, set the visibility to private.
 
 You should have the following folder structure:
--   CPS841-Labs/
+-   CPS643-Labs/
     -   .gitignore (Example)
     -   attribution.txt (Example)
     -   readme.md (This file)
@@ -43,7 +43,7 @@ In the inspector, change **Version Control Mode** to `Visible Meta Files`
 Also change **Asset Serialization Mode** to `Force Text`
 
 Once you save your project in Unity, your folder structure should look like this (For Lab 1):
--   CPS841-Labs/
+-   CPS643-Labs/
     -   Lab1/
         -   Assets/
         -   ProjectSettings/
