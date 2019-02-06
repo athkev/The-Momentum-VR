@@ -54,6 +54,8 @@ Once you save your project in Unity, your folder structure should look like this
         -   ~~Build/~~
         -   ~~Lab1.csproj~~
         -   ~~Lab1.sln~~
+        -   attribution.txt
+        -   readme.txt
     -   .gitignore
     -   attribution.txt
     -   readme.txt
