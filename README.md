@@ -2,7 +2,7 @@
 
 Although labs in this course are marked during the lab period, you are still expected to submit your source files via GitLab. Failing to do so correctly will result in a 0 for the Lab/Assignment. The guidelines below will help you make sure that you only submit the required files and folders. Furthermore, you are required to attribute sources for all materials included in your projects 
 
-If you need help with any of these steps, email [tudor.tibu@ryerson.ca](mailto:tudor.tibu@ryerson.ca)
+If you need help with any of these steps, email [rwoodworth@ryerson.ca](mailto:rwoodworth@ryerson.ca) or [nbarss@ryerson.ca](mailto:nbarss@ryerson.ca)
 
 ______________
 ### Setting up your project:
