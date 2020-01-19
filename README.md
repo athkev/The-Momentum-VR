@@ -11,7 +11,7 @@ To get started, you should fork your personal repository on GitLab:
 -   Go to https://gitlab.scs.ryerson.ca/ and login using your scs.ryerson.ca credentials (Under Kerberos).
     -   ***Be sure to set up your [profile password](https://gitlab.scs.ryerson.ca/profile/password/edit)*
 -   Look for the `CPS643` repository and fork it.
--   On the menu on the left, click on `Members`. Add `tmcinern` and `ttibu` to the repository as Maintainers.
+-   On the menu on the left, click on `Members`. Add `tmcinern`, `rwoodwor` and `nbaarss` to the repository as Maintainers.
 -   Under repository settings, set the visibility to private.
 
 You should have the following folder structure:
