@@ -1,3 +1,12 @@
+*note: updated on Feb-19-2021. Tony said its okay to update for input bindings.
+*Make sure Steam is running and SteamVR Input has customized actions
+- Spawn
+- SpawnR
+- Shoot
+- ShootR
+- Guide
+- GuideR
+
 Lab2 Taehyun Ahn
 used Quest 2 in latest steamvr
 
@@ -16,10 +25,8 @@ with righthand: applies force to the balloon if raycast hits (bonus)
 
 
 
-*make sure SteamVR Input has customized actions
-- Spawn
-- SpawnR
-- Shoot
-- ShootR
-- Guide
-- GuideR
+
+If the inputs do not work
+1) Window -> SteamVR Input
+2) click Open binding UI
+3) Set Current Binding to "Lab2" by clicking Activate
