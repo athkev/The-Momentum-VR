@@ -1,0 +1,34 @@
+// Delete two of the following three lines, leaving only the true statement and fill in the blanks.
+
+1) I've completed this statement by myself entirely.
+
+
+
+//	Place your attributions below:
+//
+//	Example:
+//
+//	Toy Balloonship by NV3D licenced under Unity-EULA
+//	https://www.assetstore.unity3d.com/en/#!/content/370
+//	https://unity3d.com/legal/as_terms
+//
+//  MinBy() by Jon Skeet Licenced under CC-by-SA
+//	http://stackoverflow.com/questions/914109/how-to-use-linq-to-select-object-with-minimum-or-maximum-property-value
+//	https://stackoverflow.blog/2009/06/attribution-required/
+
+
+Assets Imported
+- Speedball Player by Character Ink (Character)
+https://assetstore.unity.com/packages/3d/characters/humanoids/sci-fi/speedball-player-12980
+
+- 3D Free Modular Kit by Barking Dog (Map prefabs)
+https://assetstore.unity.com/packages/3d/environments/3d-free-modular-kit-85732
+
+- 3D Scifi Kit Starter Kit by Creepy Cat (Map prefabs)
+https://assetstore.unity.com/packages/3d/environments/3d-scifi-kit-starter-kit-92152
+
+- SteamVR (plugin)
+https://assetstore.unity.com/packages/tools/integration/steamvr-plugin-32647
+
+- Stereo Rendering Toolkit (plugin)
+https://assetstore.unity.com/packages/tools/particles-effects/vive-stereo-rendering-toolkit-71255
