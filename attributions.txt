@@ -16,3 +16,19 @@
 //	http://stackoverflow.com/questions/914109/how-to-use-linq-to-select-object-with-minimum-or-maximum-property-value
 //	https://stackoverflow.blog/2009/06/attribution-required/
 
+
+Assets Imported
+- Speedball Player by Character Ink (Character)
+https://assetstore.unity.com/packages/3d/characters/humanoids/sci-fi/speedball-player-12980
+
+- 3D Free Modular Kit by Barking Dog (Map prefabs)
+https://assetstore.unity.com/packages/3d/environments/3d-free-modular-kit-85732
+
+- 3D Scifi Kit Starter Kit by Creepy Cat (Map prefabs)
+https://assetstore.unity.com/packages/3d/environments/3d-scifi-kit-starter-kit-92152
+
+- SteamVR (plugin)
+https://assetstore.unity.com/packages/tools/integration/steamvr-plugin-32647
+
+- Stereo Rendering Toolkit (plugin)
+https://assetstore.unity.com/packages/tools/particles-effects/vive-stereo-rendering-toolkit-71255

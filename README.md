@@ -1,89 +1,96 @@
-# Lab Submission Guidlines
+CPS 643 Virtual Reality
+ Tae Hyun Ahn 500882444
 
-Although labs in this course are marked during the lab period, you are still expected to submit your source files via GitLab. Failing to do so correctly will result in a 0 for the Lab/Assignment. The guidelines below will help you make sure that you only submit the required files and folders. Furthermore, you are required to attribute sources for all materials included in your projects 
+[https://sites.google.com/view/the-momentum](https://sites.google.com/view/the-momentum)
 
-If you need help with any of these steps, email [rwoodworth@ryerson.ca](mailto:rwoodworth@ryerson.ca) or [nbarss@ryerson.ca](mailto:nbarss@ryerson.ca)
+User Manual
 
-______________
-### Setting up your project:
-__\*You only need to do this once per semester\*__
-To get started, you should fork your personal repository on GitLab:
--   Go to https://gitlab.scs.ryerson.ca/ and login using your scs.ryerson.ca credentials (Under Kerberos).
-    -   ***Be sure to set up your [profile password](https://gitlab.scs.ryerson.ca/profile/password/edit)*
--   Look for the `CPS643` repository and fork it.
--   On the menu on the left, click on `Members`. Add `tmcinern`, `rwoodwor` and `nbarss` to the repository as Maintainers.
--   Under repository settings, set the visibility to private.
+The Momentum is a single player Virtual Reality game where the player can experience movements that cannot be possibly done in real life. Players will take control of an android with astonishing movement strength that can jump and climb up walls with ease. The body of the android is visible to the player through Inverse Kinematics animation for deep gameplay experience.
 
-You should have the following folder structure:
--   CPS643-Labs/
-    -   .gitignore (Example)
-    -   attribution.txt (Example)
-    -   readme.md (This file)
+In order to run my unity project, make sure of these few things:
 
-________________
-### Working on your labs:
-To get your lab files on any PC, you can use [Git](https://git-scm.com/download).
-To clone your labs, use the following command:
+- Turn on Steam
+- SteamVR input settings
+- Don&#39;t touch anything and play!
 
-    git clone https://gitlab.scs.ryerson.ca/*SCS_USERNAME*/CPS643-Labs.git
+Go to Window-\&gt;SteamVR Input and check that all the actions are the same as the image.
 
-When prompted, use the following credentials:
+![](RackMultipart20210418-4-1fganwx_html_4875f879f6b8829c.png) ![](RackMultipart20210418-4-1fganwx_html_5b39250f5bd6905c.png)
+ Open binding UI and make sure the project default binding I made is activated.
+ That&#39;s it! Press play and enjoy.
 
-**Login:** (Your whole scs **e-mail**)
-**Password:** ([Your GitLab password](https://gitlab.scs.ryerson.ca/profile/password/edit))
+![](RackMultipart20210418-4-1fganwx_html_b32d22a1be44dd0.png)
+ Unity has a bug where if you have a gameobject selected in the editor before pressing play, game will lag. So clear your selection before playing.
 
-### Starting a new lab:
+Description of my implementations
 
-When you start a new lab, create a new Unity project inside `CPS643-Labs` and name it appropriately (Lab1, Lab2, etc) Copy the example gitignore and attribution files. 
+Scripts
 
+**Inverse Kinematics:**
+Animation rigging made the character move in a way the hands and head move.
 
-In order for Unity to play nice with git, you have to change the way it stores files:
-Go to **Edit**>**Project Settings**>**Editor**
-In the inspector, change **Version Control Mode** to `Visible Meta Files`
-Also change **Asset Serialization Mode** to `Force Text`
+- cs
+ Set the position of each foot. Ground check raycast is used to determine if there is a ground below. If there is, feet are located to that hit point.
+- cs
+ Set the position and rotation of hands. Moving the hand bones moves the arms accordingly through the animation rigging. The script makes the bones follow the controllers with offsets.
+- cs
+ Makes the player body follow the player&#39;s camera (head). Offsets are used to fit camera and the body to the right place.
 
-Once you save your project in Unity, your folder structure should look like this (For Lab 1):
--   CPS643-Labs/
-    -   Lab1/
-        -   Assets/
-        -   ProjectSettings/
-        -   .gitignore
-        -   attribution.txt
-        -   ~~Library/~~
-        -   ~~Temp/~~
-        -   ~~Build/~~
-        -   ~~Lab1.csproj~~
-        -   ~~Lab1.sln~~
-        -   attribution.txt
-        -   readme.txt
-    -   .gitignore
-    -   attribution.txt
-    -   readme.txt
+**Player movements:**
 
-The files that are ~~crossed out~~ are not essential to your project. In fact, they may not even be there. They are temporary files. Don't worry about deleting them. If you've set up your gitignore correctly, they should be automatically ignored when you commit/push.
-______________
-### Saving your work.
-Periodically, as you're working, it's a good idea to commit and push. (Remember that the lab computers get wiped when you log off). To do this, enter the following commands:
+Configured rigidbody force and velocity.
 
-    git add *
-    git commit -m "A brief message here"
-    git push
+- cs &amp; HandControls.cs
+ Control of player controller actions and movements. Rigidbody velocity is set by the player&#39;s left joystick. Rotation of the player gameobject is controlled by right joystick action. Pressing the jump button adds Vector3.up force to the player. Grabbing a wall moves the player body depending on the controller velocity.
+- cs
+ Sets variables used for character animation (idle/walk/run/jump).
 
-To update your repository (if you made changes on another computer), use the following command:
+**Portal:**
+Supports different render textures for both vr eyes through Vive Stereo-Renderer Plugin
 
-    git pull
-    
-You can also use the GUI provided in [Git for Windows](https://git-for-windows.github.io/) or [Visual Studio](https://www.visualstudio.com/en-us/docs/git/gitquickstart).
-________________
-### Submitting your work.
-Any work you push is automatically submitted. However, submissions will only be accepted until 23:59:59 PM (Toronto time) on the assignment's due date. Don't worry if you're missing attributions in your partial commits as long as you add them before the final due date.
-____________
-### Attribution
-Inside each lab, you should have an Attributions.txt file I which you can declare whether you've completed this lab on your own. Furthermore, you should utilize this file to provide attribution for any assets you've used in your project. This includes Code, 3D models, Audio, Textures, etc. `attributions.txt` contains an example of sourcing. You can also look at [this resource](https://wiki.creativecommons.org/wiki/Best_practices_for_attribution).
+- cs
+ Set location of portals. Enables line renderer that guides where it will be sent.,
+- cs
+ Modified vive stereo-renderer plugin script so that when a player goes into a portal, velocity used to enter a portal will remain on the other side. Also changed so that the code works when the portal is set on horizontal space.
 
-The exceptions for this are any assets that are linked to you by the lab manuals and framework files.(eg Unity, SteamVR, Oculus, etc).
+**Audio:**
 
-For small code attributions (Smaller than one file), you may opt to include the attribution in the source code itself in the form of an inline comment or a file/function header.
-_________________
-### Folder structure
-Within each lab, it's preferable (but not required) if you keep all of your Assets organized. (e.g. all your scripts in a Scripts folder, all your prefabs in a Prefab folder, etc)
+- cs
+ Play footstep audio when the character&#39;s feet hit the ground. Since the footIK.cs made the character feet to &#39;stick&#39; on the ground, another body that is invisible is used for accurate foot ground check.
+- cs
+ Play door open audio when the player enters the trigger collider. Play door close audio when the player exits the trigger collider. Spatial blend from an audio source is used for spatialized audio.
+
+**Event:**
+
+- cs &amp; secondPart.cs &amp; finalPart.cs
+
+Except for firstDoor.cs, tts narrator audio plays when the player enters the trigger collider, starting the event.
+
+FirstDoor.cs plays the event sequence from the beginning and opens the first door after a few seconds.
+
+- cs &amp; MapOptimization2.cs
+ Scripts for optimizing game performance. Disables part of the map if the player is not nearby.
+
+Assets Imported
+- Speedball Player by Character Ink (Character)
+
+- 3D Free Modular Kit by Barking Dog (Map prefabs)
+
+- 3D Scifi Kit Starter Kit by Creepy Cat (Map prefabs)
+
+- SteamVR (plugin)
+
+- Vive Stereo Rendering ToolKit (plugin)
+
+Assets Created
+- Wire cables (prop)
+
+Audio Used
+- Portal: Test Chamber 02 (Background Ambience Audio)
+
+- Destiny 2: Mars door sound (Door open/close audio)
+
+- TTS Amazon Brian (narration audio)
+
+Side Note
+Had lots of fun making this project. Really focused on player movements and climbing/releasing action. The hand controls are scripted so that the hand automatically releases from the wall when it gets too far from the initial grabbed position. It is possible for the player to push the body away with a hand collider while grabbing a wall which messes up the experience (you could essentially fly if i didn&#39;t implement that script). Portals were extra stuff I wanted to try out just for fun. Turned out it is harder than I expected as it seems from the original game. The portal I have configured works perfectly fine if the two portals are perpendicular from the ground, but not so much for horizontal portals. Floor colliders stop the player&#39;s velocity so making a hole to a collider on the portal position would solve it, there&#39;s that.
